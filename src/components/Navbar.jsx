@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaSearch } from 'react-icons/fa';
 
 const Section = styled.div`
 	display: flex;
@@ -26,8 +27,9 @@ const Icons = styled.div`
 	gap: 20px;
 `
 
-const Icon = styled.img`
+const SearchIcon = styled(FaSearch)`
 	width: 20px;
+	height: 20px;
 	cursor: pointer;
 `
 
@@ -60,7 +62,7 @@ const Navbar = () => {
 		<Section>
 			<Container>
 				<Menu>
-					<Logo src='./img/logo.png' />
+					<Logo src='./img/logo.png' alt='Logo' />
 					<List>
 						<ListItem>Home</ListItem>
 						<ListItem>Industry</ListItem>
@@ -69,7 +71,7 @@ const Navbar = () => {
 					</List>
 				</Menu>
 				<Icons>
-					<Icon></Icon>
+					<SearchIcon />
 					<Button>Hire Now</Button>
 				</Icons>
 			</Container>
