@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { PerspectiveCamera, RenderTexture, Text } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-export const Cube = () => {
+const Cube = () => {
 	const textRef = useRef()
 	useFrame(state => (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2));
 	return (
