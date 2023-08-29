@@ -25,7 +25,7 @@ function App() {
 			<Candidate/>
 			<About/>
 			<Industry/>
-			<Contacts/>
+			<Contacts />
 		</Container>
 	)
 }

@@ -5,7 +5,7 @@ const data = [
 	'Development',
 	'Web Design',
 	'Illustration',
-	'Product Design',
+	'Design',
 	'Social Media',
 ];
 
@@ -39,12 +39,11 @@ const ListItem = styled.li`
 	font-size: 90px;
 	font-weight: bold;
 	cursor: pointer;
+	position: relative;
 	color: transparent;
 	-webkit-text-stroke: 1px white;
-	position: relative;
-
-	::after{
-		content: "${(props)=>props.text}";
+	&::after{
+		content: '${(props)=>props.text}';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -55,7 +54,7 @@ const ListItem = styled.li`
 	}
 
 	&:hover {
-		::after{
+		&::after{
 			animation: moveText 0.5s linear both;
 
 			@keyframes moveText {
