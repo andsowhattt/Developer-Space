@@ -18,18 +18,32 @@ const Section = styled.div`
 	scroll-snap-align: center;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	color: black;
+	font-size: 14px;
+	font-weight: 300;
 `
 
 const Container = styled.div`
 	height: 1400px;
 	display: flex;
 	justify-content: space-between;
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		flex-direction: column;
+	}
 `
 
 const Directions = styled.div`
 	flex: 1;
 	display: flex;
 	align-items: center;
+
+	@media only screen and (max-width: 768px) {
+		padding: 20px;
+		justify-content: center;
+	}
 `
 
 const List = styled.ul`
@@ -46,8 +60,15 @@ const ListItem = styled.li`
 	position: relative;
 	color: transparent;
 	-webkit-text-stroke: 1px white;
+
+	@media only screen and (max-width: 768px) {
+		font-size: 24px;
+		color: white;
+		-webkit-text-stroke: 0px;
+	}
+
 	&::after{
-		content: '${(props)=>props.text}';
+		content: '${(props) => props.text}';
 		position: absolute;
 		top: 0;
 		left: 0;
