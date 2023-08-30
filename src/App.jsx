@@ -1,6 +1,7 @@
-import Candidate from './components/Candidate';
-import About from './components/About';
-import Industry from './components/Industry';
+import React from 'react';
+import Home from './components/Home';
+import Creativity from './components/Creativity';
+import Skills from './components/Skills';
 import Contacts from './components/Contacts';
 import styled from 'styled-components';
 
@@ -22,9 +23,9 @@ function App() {
 
 	return (
 		<Container>
-			<Candidate/>
-			<About/>
-			<Industry/>
+			<Home/>
+			<Creativity/>
+			<Skills/>
 			<Contacts />
 		</Container>
 	)

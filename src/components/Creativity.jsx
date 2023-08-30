@@ -34,7 +34,7 @@ const Title = styled.h1`
 		font-size: 60px;
 	}
 `
-const Company = styled.div`
+const Motto= styled.div`
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -46,7 +46,7 @@ const Line = styled(FaMinus)`
 `
 
 const Subtitle = styled.h2`
-	color: #da4ea2;
+	color: #fdb133;
 	font-style: italic;
 `
 const Desc = styled.p`
@@ -54,16 +54,22 @@ const Desc = styled.p`
 	color: lightgray;
 `
 const Button = styled.button`
-	background-color: #da4ea2;
+	background-color: transparent;
 	color: white;
+	border: 1px solid white;
 	font-size: 18px;
 	font-weight: 500;
 	padding: 10px;
 	width: 180px;
-	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-`
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+	&:hover {
+		background-color: #3d1c56;
+		transform: scale(1.05);
+	}
+`;
 
 const Info = styled.div`
 	flex: 1;
@@ -78,13 +84,13 @@ const Info = styled.div`
 	}
 `
 
-const About = () => {
+const Creativity = () => {
 	return (
-		<Section>
+		<Section id='creativity'>
 			<Container>
 				<Animation>
-					<Canvas camera={{fov:25, position:[5,5,5]}}>
-						<OrbitControls enableZoom={false} autoRotate/>
+					<Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
+						<OrbitControls enableZoom={false} autoRotate />
 						<ambientLight intensity={1} />
 						<directionalLight position={[3, 2, 1]} />
 						<Cube />
@@ -92,10 +98,10 @@ const About = () => {
 				</Animation>
 				<Info>
 					<Title>Expand your thinking beyond the confines of the square area.</Title>
-					<Company>
+					<Motto>
 						<Line />
 						<Subtitle>Any idea deserves to be implemented.</Subtitle>
-					</Company>
+					</Motto>
 					<Desc>A great developer is someone who is guided by creativity.</Desc>
 					<Button>Contact Me</Button>
 				</Info>
@@ -104,4 +110,4 @@ const About = () => {
 	)
 }
 
-export default About;
+export default Creativity;

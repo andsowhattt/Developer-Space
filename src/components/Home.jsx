@@ -64,7 +64,7 @@ const Line = styled(FaMinus)`
 `
 
 const Subtitle = styled.h2`
-	color: #da4ea2;
+	color: #fdb133;
 	font-style: italic;
 `
 const Desc = styled.p`
@@ -76,16 +76,22 @@ const Desc = styled.p`
 	}
 `
 const Button = styled.button`
-	background-color: #da4ea2;
+	background-color: transparent;
 	color: white;
+	border: 1px solid white;
 	font-size: 18px;
 	font-weight: 500;
 	padding: 10px;
 	width: 180px;
-	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-`
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+	&:hover {
+		background-color: #3d1c56;
+		transform: scale(1.05);
+	}
+`;
 
 const Animation = styled.div`
 	flex: 3;
@@ -120,9 +126,9 @@ const Img = styled.img`
 	}
 `;
 
-const Candidate = () => {
+const Home = () => {
 	return (
-		<Section>
+		<Section id='home'>
 			<Navbar />
 			<Container>
 				<Motto>
@@ -155,4 +161,4 @@ const Candidate = () => {
 	)
 }
 
-export default Candidate;
+export default Home;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaSearch } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
 
 const Section = styled.div`
 	display: flex;
@@ -27,7 +27,9 @@ const Container = styled.div`
 const Menu = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 50px;
+	gap: 60px;
+	font-size: 18px;
+	font-weight: 500;
 `;
 
 const Icons = styled.div`
@@ -36,10 +38,14 @@ const Icons = styled.div`
 	gap: 20px;
 `;
 
-const SearchIcon = styled(FaSearch)`
+const SearchIcon = styled(FaPhone)`
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.05);
+	}
 `;
 
 const Logo = styled.img`
@@ -48,7 +54,7 @@ const Logo = styled.img`
 
 const List = styled.ul`
 	display: flex;
-	gap: 20px;
+	gap: 30px;
 	list-style: none;
 
 	@media only screen and (max-width: 768px) {
@@ -58,36 +64,62 @@ const List = styled.ul`
 
 const ListItem = styled.li`
 	cursor: pointer;
+	
+	&:hover {
+		transform: scale(1.05);
+	}
 `;
 
 const Button = styled.button`
-	width: 180px;
-	padding: 10px;
-	background-color: #da3ea2;
+	background-color: transparent;
 	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+	border: 1px solid white;
 	font-size: 18px;
 	font-weight: 500;
+	padding: 10px;
+	width: 180px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+	&:hover {
+		background-color: #3d1c56;
+		transform: scale(1.05);
+	}
 `;
 
 const Navbar = () => {
+
+	const [phoneNumber, setPhoneNumber] = useState('+380501080118');
+
+	const handlePhoneIconClick = () => {
+		window.location.href = `tel:${phoneNumber}`;
+	};
+
+
 	return (
 		<Section>
 			<Container>
 				<Menu>
 					<Logo src='./img/logo.png' alt='Logo' />
 					<List>
-						<ListItem>Home</ListItem>
-						<ListItem>Сreativity</ListItem>
-						<ListItem>Skills</ListItem>
-						<ListItem>Contacts</ListItem>
+						<ListItem>
+							<a href="#home">Home</a>
+						</ListItem>
+						<ListItem>
+							<a href="#creativity">Сreativity</a>
+						</ListItem>
+						<ListItem>
+							<a href="#skills">Skills</a>
+						</ListItem>
+						<ListItem>
+							<a href="#contacts">Contacts</a>
+						</ListItem>
 					</List>
 				</Menu>
 				<Icons>
-					<SearchIcon />
-					<Button>Hire Now</Button>
+					<SearchIcon onClick={handlePhoneIconClick} />
+					<Button onClick={() => window.location.href = '#contacts'}>Hire Now</Button>
 				</Icons>
 			</Container>
 		</Section>

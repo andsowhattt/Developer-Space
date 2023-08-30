@@ -14,8 +14,8 @@ const Cube = () => {
 						makeDefault
 						position={[0, 0, 5]}
 					/>
-					<color attach='background' args={['#dc9dcd']} />
-					<Text ref={textRef} fontSize={2} color='#555'>
+					<color attach='background' args={['#ad06df']} />
+					<Text ref={textRef} fontSize={2} color='#c1a9b2'>
 						frontend
 					</Text>
 				</RenderTexture>

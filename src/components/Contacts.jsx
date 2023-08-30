@@ -57,15 +57,21 @@ const TextArea = styled.textarea`
 `
 
 const Button = styled.button`
-	background-color: #da4ea2;
+	background-color: transparent;
 	color: white;
-	border: none;
+	border: 1px solid white;
 	font-size: 18px;
 	font-weight: 500;
-	cursor: pointer;
-	border-radius: 5px;
 	padding: 20px;
-`
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+	&:hover {
+		background-color: #3d1c56;
+		transform: scale(1.05);
+	}
+`;
 
 const Location = styled.div`
 	flex: 1;
@@ -93,7 +99,7 @@ const Contacts = () => {
 	};
 
 	return (
-		<Section>
+		<Section id="contacts">
 			<Container>
 				<Feedback>
 					<Form ref={ref} onSubmit={handleSubmit}>

@@ -74,7 +74,7 @@ const ListItem = styled.li`
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: pink;
+		color: #3d1c56;
 		width: 0px;
 		overflow: hidden;
 		white-space: nowrap;
@@ -97,10 +97,10 @@ const Animation = styled.div`
 	flex: 1;
 `
 
-const Industry = () => {
+const Skills = () => {
 	const [work, setWork] = useState('Development')
 	return (
-		<Section>
+		<Section id='skills'>
 			<Container>
 				<Directions>
 					<List>
@@ -134,4 +134,4 @@ const Industry = () => {
 	)
 }
 
-export default Industry;
+export default Skills;
