@@ -42,11 +42,12 @@ const Company = styled.div`
 
 const Line = styled(FaMinus)`
 	height: 15px;
-	
+	margin-left: 50px;
 `
 
 const Subtitle = styled.h2`
 	color: #da4ea2;
+	font-style: italic;
 `
 const Desc = styled.p`
 	font-size: 24px;
@@ -55,9 +56,10 @@ const Desc = styled.p`
 const Button = styled.button`
 	background-color: #da4ea2;
 	color: white;
+	font-size: 18px;
 	font-weight: 500;
 	padding: 10px;
-	width: 120px;
+	width: 180px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -89,13 +91,13 @@ const About = () => {
 					</Canvas>
 				</Animation>
 				<Info>
-					<Title>Think outside the square space</Title>
+					<Title>Expand your thinking beyond the confines of the square area.</Title>
 					<Company>
 						<Line />
-						<Subtitle>Who we are</Subtitle>
+						<Subtitle>Any idea deserves to be implemented.</Subtitle>
 					</Company>
-					<Desc>A creative group of developers and designers with a passion for the arts.</Desc>
-					<Button>See our works</Button>
+					<Desc>A great developer is someone who is guided by creativity.</Desc>
+					<Button>Contact Me</Button>
 				</Info>
 			</Container>
 		</Section>

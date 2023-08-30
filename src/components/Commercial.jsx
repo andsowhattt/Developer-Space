@@ -1,8 +1,9 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
+import Sneaker from '../3D/Sneaker';
 import React from 'react'
-import Sneaker from './Sneaker';
 import styled from 'styled-components';
+
 
 const Desc = styled.div`
 	width: 200px;
@@ -11,7 +12,7 @@ const Desc = styled.div`
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	bottom: 550px;
+	top: 350px;
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
@@ -23,20 +24,19 @@ const Desc = styled.div`
 	}
 `;
 
-const ProductDesign = () => {
+const Commercial = () => {
 	return (
 		<>
 			<Canvas>
 				<Stage environment='city' intensity={0.6}>
 					<Sneaker />
 				</Stage>
-				<OrbitControls enableZoom={false} autoRotate/>
+				<OrbitControls enableZoom={false} autoRotate />
 			</Canvas>
-			<Desc>We design products with a strong focus on both world class design and
-				ensuring your product is a market success.
+			<Desc>The front end affects how users interact with and perceive the product, influencing their decision to make a purchase.
 			</Desc>
 		</>
 	)
 }
 
-export default ProductDesign;
+export default Commercial;

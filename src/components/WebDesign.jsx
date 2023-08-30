@@ -2,7 +2,7 @@ import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import styled from 'styled-components';
-import Web from './Web';
+import Web from '../3D/Web';
 
 const Desc = styled.div`
 	width: 200px;
@@ -32,8 +32,7 @@ const WebDesign = () => {
 				</Stage>
 				<OrbitControls enableZoom={false} autoRotate/>
 			</Canvas>
-			<Desc>We design products with a strong focus on both world class design and
-				ensuring your product is a market success.
+			<Desc>I design products with a pixel-perfect focus on both your Figma design and usability.
 			</Desc>
 		</>
 	)

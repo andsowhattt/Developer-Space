@@ -60,16 +60,16 @@ const Motivation = styled.div`
 
 const Line = styled(FaMinus)`
 	height: 15px;
-	
+	margin-left: 50px;
 `
 
 const Subtitle = styled.h2`
 	color: #da4ea2;
+	font-style: italic;
 `
 const Desc = styled.p`
 	font-size: 24px;
 	color: lightgray;
-
 	@media only screen and (max-width: 768px) {
 		padding: 20px;
 		text-align: center;
@@ -78,9 +78,10 @@ const Desc = styled.p`
 const Button = styled.button`
 	background-color: #da4ea2;
 	color: white;
+	font-size: 18px;
 	font-weight: 500;
 	padding: 10px;
-	width: 100px;
+	width: 180px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -125,13 +126,13 @@ const Candidate = () => {
 			<Navbar />
 			<Container>
 				<Motto>
-					<Title>Think. Make. Solve.</Title>
+					<Title>Imagine. Create. Enjoy.</Title>
 					<Motivation>
 						<Line />
-						<Subtitle>What we do</Subtitle>
+						<Subtitle>Who Am I?</Subtitle>
 					</Motivation>
-					<Desc>We enjoy creating delightful, human-centered digital experiences.</Desc>
-					<Button>Learn More</Button>
+					<Desc>Being a Frontend Developer, akin to a storyteller of the digital era, I craft a space that resonates and inspires. Take a step into the realm where imagination meets code, where design comes alive, and interfaces narrate stories.</Desc>
+					<Button onClick={() => window.open('https://github.com/andsowhattt', '_blank')}>Explore My Work</Button>
 				</Motto>
 				<Animation>
 					<Canvas>

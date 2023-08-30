@@ -1,7 +1,7 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
+import SupportService from '../3D/SupportService';
 import React from 'react'
-import React_logo from '../3D/React_logo';
 import styled from 'styled-components';
 
 const Desc = styled.div`
@@ -11,7 +11,7 @@ const Desc = styled.div`
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	top: 350px;
+	bottom: 550px;
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
@@ -23,19 +23,19 @@ const Desc = styled.div`
 	}
 `;
 
-const Development = () => {
+const Support = () => {
 	return (
 		<>
 			<Canvas>
 				<Stage environment='city' intensity={0.6}>
-					<React_logo />
+					<SupportService />
 				</Stage>
-				<OrbitControls enableZoom={false} autoRotate />
+				<OrbitControls enableZoom={false} autoRotate/>
 			</Canvas>
-			<Desc>I have the necessary stacks of technologies, libraries and frameworks for the development of high-quality and productive projects.
+			<Desc>I can provide ongoing support in the website's development over the years by integrating new and modern features.
 			</Desc>
 		</>
 	)
 }
 
-export default Development;
+export default Support;

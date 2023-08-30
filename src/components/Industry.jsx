@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Development from './Development';
-import ProductDesign from './ProductDesign';
+import Support from './Support';
+import MobileApp from './MobileApp';
 import WebDesign from './WebDesign';
+import Commercial from './Commercial';
 
 
 const data = [
 	'Development',
+	'Mobile App Interface',
 	'Web Design',
-	'Illustration',
-	'Design',
-	'Social Media',
+	'Commercial Projects',
+	'Projects Support',
 ];
 
 const Section = styled.div`
-	// height: 100vh;
+	height: 150vh;
 	scroll-snap-align: center;
 	display: flex;
 	justify-content: center;
@@ -54,7 +56,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-	font-size: 90px;
+	font-size: 80px;
 	font-weight: bold;
 	cursor: pointer;
 	position: relative;
@@ -96,24 +98,36 @@ const Animation = styled.div`
 `
 
 const Industry = () => {
-	const [work,setWork] = useState('Development')
+	const [work, setWork] = useState('Development')
 	return (
 		<Section>
 			<Container>
 				<Directions>
 					<List>
 						{data.map((item) => (
-							<ListItem key={item} text={item} onClick={()=>setWork(item)}>
+							<ListItem key={item} text={item} onClick={() => setWork(item)}>
 								{item}
 							</ListItem>
 						))}
 					</List>
 				</Directions>
 				<Animation>
-					{work === 'Development' ? (<Development />
-					) : work === 'Web Design' ? (<WebDesign />
-					) : (<ProductDesign />
-					)}
+					{(() => {
+						switch (work) {
+							case 'Development':
+								return <Development />;
+							case 'Mobile App Interface':
+								return <MobileApp />;
+							case 'Web Design':
+								return <WebDesign />;
+							case 'Commercial Projects':
+								return <Commercial />;
+							case 'Projects Support':
+								return <Support />;
+							default:
+								return null;
+						}
+					})()}
 				</Animation>
 			</Container>
 		</Section>

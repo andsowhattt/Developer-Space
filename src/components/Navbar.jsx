@@ -61,13 +61,15 @@ const ListItem = styled.li`
 `;
 
 const Button = styled.button`
-	width: 100px;
+	width: 180px;
 	padding: 10px;
 	background-color: #da3ea2;
 	color: white;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
 `;
 
 const Navbar = () => {
@@ -78,8 +80,8 @@ const Navbar = () => {
 					<Logo src='./img/logo.png' alt='Logo' />
 					<List>
 						<ListItem>Home</ListItem>
-						<ListItem>Industry</ListItem>
-						<ListItem>About</ListItem>
+						<ListItem>Сreativity</ListItem>
+						<ListItem>Skills</ListItem>
 						<ListItem>Contacts</ListItem>
 					</List>
 				</Menu>

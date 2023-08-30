@@ -60,7 +60,8 @@ const Button = styled.button`
 	background-color: #da4ea2;
 	color: white;
 	border: none;
-	font-weight: bold;
+	font-size: 18px;
+	font-weight: 500;
 	cursor: pointer;
 	border-radius: 5px;
 	padding: 20px;
@@ -97,14 +98,14 @@ const Contacts = () => {
 				<Feedback>
 					<Form ref={ref} onSubmit={handleSubmit}>
 						<Title>
-							Contact Us
+							Contact Me
 						</Title>
 						<Input placeholder='Name' name='name' />
 						<Input placeholder='Email' name='email' />
 						<TextArea placeholder='Write your message' name='message' rows={10} />
 						<Button type='submit'>Send</Button>
 						{success &&
-							"Your message has been sent. We'll get back to you soon."}
+							"Your message has been sent. I'll get back to you soon."}
 					</Form>
 				</Feedback>
 				<Location>

@@ -1,8 +1,9 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
+import App from '../3D/App';
 import React from 'react'
-import React_logo from '../3D/React_logo';
 import styled from 'styled-components';
+
 
 const Desc = styled.div`
 	width: 200px;
@@ -11,7 +12,7 @@ const Desc = styled.div`
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	top: 350px;
+	top: 500px;
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
@@ -23,19 +24,19 @@ const Desc = styled.div`
 	}
 `;
 
-const Development = () => {
+const MobileApp = () => {
 	return (
 		<>
 			<Canvas>
 				<Stage environment='city' intensity={0.6}>
-					<React_logo />
+					<App />
 				</Stage>
-				<OrbitControls enableZoom={false} autoRotate />
+				<OrbitControls enableZoom={false} autoRotate/>
 			</Canvas>
-			<Desc>I have the necessary stacks of technologies, libraries and frameworks for the development of high-quality and productive projects.
+			<Desc>Understanding the basics of UX and UI helps create a user-friendly and appealing interface.
 			</Desc>
 		</>
 	)
 }
 
-export default Development;
+export default MobileApp;

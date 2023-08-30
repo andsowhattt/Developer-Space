@@ -16,7 +16,7 @@ const Cube = () => {
 					/>
 					<color attach='background' args={['#dc9dcd']} />
 					<Text ref={textRef} fontSize={2} color='#555'>
-						front-end
+						frontend
 					</Text>
 				</RenderTexture>
 			</meshStandardMaterial>
