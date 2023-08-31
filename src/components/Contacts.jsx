@@ -83,18 +83,36 @@ const Location = styled.div`
 
 const Contacts = () => {
 	const ref = useRef();
-	const [success, setSuccess] = useState(null)
+	const [success, setSuccess] = useState(null);
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		message: ''
+	});
+
+	const handleInputChange = e => {
+		const { name, value } = e.target;
+		setFormData(prevData => ({
+			...prevData,
+			[name]: value
+		}));
+	};
 
 	const handleSubmit = e => {
-		e.preventDefault()
+		e.preventDefault();
 
 		emailjs.sendForm('service_rqqbjgj', 'template_my7ive6', ref.current, 'wx7_C5brdReRsDFz6')
 			.then((result) => {
 				console.log(result.text);
-				setSuccess(true)
+				setSuccess(true);
+				setFormData({
+					name: '',
+					email: '',
+					message: ''
+				});
 			}, (error) => {
 				console.log(error.text);
-				setSuccess(false)
+				setSuccess(false);
 			});
 	};
 
@@ -106,9 +124,25 @@ const Contacts = () => {
 						<Title>
 							Contact Me
 						</Title>
-						<Input placeholder='Name' name='name' />
-						<Input placeholder='Email' name='email' />
-						<TextArea placeholder='Write your message' name='message' rows={10} />
+						<Input
+							placeholder='Name'
+							name='name'
+							value={formData.name}
+							onChange={handleInputChange}
+						/>
+						<Input
+							placeholder='Email'
+							name='email'
+							value={formData.email}
+							onChange={handleInputChange}
+						/>
+						<TextArea
+							placeholder='Write your message'
+							name='message'
+							rows={10}
+							value={formData.message}
+							onChange={handleInputChange}
+						/>
 						<Button type='submit'>Send</Button>
 						{success &&
 							"Your message has been sent. I'll get back to you soon."}
@@ -119,7 +153,7 @@ const Contacts = () => {
 				</Location>
 			</Container>
 		</Section>
-	)
-}
+	);
+};
 
 export default Contacts;
