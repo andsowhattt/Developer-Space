@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Cube from './Cube';
+import Cube from '../sections/Cube';
 import { FaMinus } from 'react-icons/fa';
 
 const Section = styled.div`
@@ -103,7 +103,7 @@ const Creativity = () => {
 						<Subtitle>Any idea deserves to be implemented.</Subtitle>
 					</Motto>
 					<Desc>A great developer is someone who is guided by creativity.</Desc>
-					<Button>Contact Me</Button>
+					<Button onClick={() => window.location.href = '#contacts'}>Contact Me</Button>
 				</Info>
 			</Container>
 		</Section>

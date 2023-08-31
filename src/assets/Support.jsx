@@ -1,8 +1,8 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
+import Ok from '../3D/Ok';
 import React from 'react'
 import styled from 'styled-components';
-import Web from '../3D/Web';
 
 const Desc = styled.div`
 	width: 200px;
@@ -11,7 +11,7 @@ const Desc = styled.div`
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	top: 500px;
+	bottom: 550px;
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
@@ -23,19 +23,19 @@ const Desc = styled.div`
 	}
 `;
 
-const WebDesign = () => {
+const Support = () => {
 	return (
 		<>
 			<Canvas>
 				<Stage environment='city' intensity={0.6}>
-					<Web />
+					<Ok />
 				</Stage>
 				<OrbitControls enableZoom={false} autoRotate/>
 			</Canvas>
-			<Desc>I design products with a pixel-perfect focus on both your Figma design and usability.
+			<Desc>I can provide ongoing support in the website's development over the years by integrating new and modern features.
 			</Desc>
 		</>
 	)
 }
 
-export default WebDesign;
+export default Support;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Development from './Development';
-import Support from './Support';
-import MobileApp from './MobileApp';
-import WebDesign from './WebDesign';
-import Commercial from './Commercial';
+import Development from '../assets/Development';
+import Support from '../assets/Support';
+import MobileApp from '../assets/MobileApp';
+import WebDesign from '../assets/WebDesign';
+import Commercial from '../assets/Commercial';
 
 
 const data = [
@@ -16,10 +16,10 @@ const data = [
 ];
 
 const Section = styled.div`
-	height: 150vh;
-	scroll-snap-align: center;
+	height: 100vh;
+	scroll-snap-align: start;
 	display: flex;
-	justify-content: center;
+	// justify-content: center;
 	position: relative;
 	color: black;
 	font-size: 14px;
@@ -27,7 +27,7 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-	height: 1400px;
+	height: 1000px;
 	display: flex;
 	justify-content: space-between;
 
@@ -38,9 +38,10 @@ const Container = styled.div`
 `
 
 const Directions = styled.div`
-	flex: 1;
+	flex: 2;
 	display: flex;
 	align-items: center;
+	margin-left: auto;
 
 	@media only screen and (max-width: 768px) {
 		padding: 20px;
@@ -56,7 +57,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-	font-size: 80px;
+	font-size: 60px;
 	font-weight: bold;
 	cursor: pointer;
 	position: relative;
@@ -94,7 +95,10 @@ const ListItem = styled.li`
 `;
 
 const Animation = styled.div`
-	flex: 1;
+	flex: 2;
+	margin-right: auto;
+	width: 1100px;
+	
 `
 
 const Skills = () => {
@@ -102,7 +106,7 @@ const Skills = () => {
 	return (
 		<Section id='skills'>
 			<Container>
-				<Directions>
+				<Directions> 
 					<List>
 						{data.map((item) => (
 							<ListItem key={item} text={item} onClick={() => setWork(item)}>

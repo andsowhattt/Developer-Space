@@ -1,19 +1,18 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
-import App from '../3D/App';
 import React from 'react'
 import styled from 'styled-components';
-
+import Air from '../3D/Air';
 
 const Desc = styled.div`
 	width: 200px;
-	height: 70px;
+	height: fit-content;
 	padding: 20px;
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	top: 500px;
-	right: 100px;
+	top: 50px;
+	right: 50px;
 
 	@media only screen and (max-width: 768px) {
 		top: 0;
@@ -24,19 +23,19 @@ const Desc = styled.div`
 	}
 `;
 
-const MobileApp = () => {
+const Development = () => {
 	return (
 		<>
 			<Canvas>
 				<Stage environment='city' intensity={0.6}>
-					<App />
+					<Air />
 				</Stage>
-				<OrbitControls enableZoom={false} autoRotate/>
+				<OrbitControls enableZoom={false} autoRotate />
 			</Canvas>
-			<Desc>Understanding the basics of UX and UI helps create a user-friendly and appealing interface.
+			<Desc>I design products with a pixel-perfect focus on both your Figma design and usability.
 			</Desc>
 		</>
 	)
 }
 
-export default MobileApp;
+export default Development;
