@@ -30,7 +30,6 @@ const Section = styled.div`
 	@media only screen and (max-width: 768px) {
 		padding-bottom: 10px;
 		scroll-snap-align: none;
-		-webkit-overflow-scrolling: touch; 
 	}
 `
 
@@ -84,7 +83,7 @@ const ListItem = styled.li`
 	-webkit-text-stroke: 1px white;
 
 	@media only screen and (max-width: 768px) {
-		font-size: 32px;
+		font-size: 45px;
 	}
 
 	&::after{

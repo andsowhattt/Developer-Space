@@ -1,7 +1,7 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
 import App from '../3D/App';
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -16,7 +16,7 @@ const Desc = styled.div`
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
-		top: 0;
+		top: 280px;
 		bottom: 0;
 		left: 0;
 		right: 0;

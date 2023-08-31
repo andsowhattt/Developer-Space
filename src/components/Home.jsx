@@ -16,8 +16,6 @@ const Section = styled.div`
 	@media only screen and (max-width: 768px) {
 		height: 200vh;
 		scroll-snap-align: none;
-		overflow-y: scroll; 
-		-webkit-overflow-scrolling: touch; 
 	}
 `
 
@@ -45,6 +43,7 @@ const Container = styled.div`
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		scroll-snap-align: none;
 	}
 `
 
