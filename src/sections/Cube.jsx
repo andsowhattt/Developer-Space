@@ -7,7 +7,7 @@ const Cube = () => {
 	useFrame(state => (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 5));
 	return (
 		<mesh>
-			<boxGeometry args={[1.5, 1.5, 1.5]} /> {/* Змінено розміри геометрії */}
+			<boxGeometry args={[1.5, 1.5, 1.5]} /> 
 			<meshStandardMaterial>
 				<RenderTexture attach='map'>
 					<PerspectiveCamera
