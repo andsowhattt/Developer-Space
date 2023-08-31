@@ -3,11 +3,11 @@ import { PerspectiveCamera, RenderTexture, Text } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 const Cube = () => {
-	const textRef = useRef()
-	useFrame(state => (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2));
+	const textRef = useRef();
+	useFrame(state => (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 5));
 	return (
 		<mesh>
-			<boxGeometry />
+			<boxGeometry args={[1.5, 1.5, 1.5]} /> {/* Змінено розміри геометрії */}
 			<meshStandardMaterial>
 				<RenderTexture attach='map'>
 					<PerspectiveCamera
@@ -15,8 +15,8 @@ const Cube = () => {
 						position={[0, 0, 5]}
 					/>
 					<color attach='background' args={['#ad06df']} />
-					<Text ref={textRef} fontSize={2} color='#c1a9b2'>
-						frontend
+					<Text ref={textRef} fontSize={3} color='#c1a9b2'>
+						front-end
 					</Text>
 				</RenderTexture>
 			</meshStandardMaterial>
