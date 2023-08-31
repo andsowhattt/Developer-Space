@@ -15,15 +15,30 @@ const Section = styled.div`
 
 	@media only screen and (max-width: 768px) {
 		height: 200vh;
+		scroll-snap-align: none;
+		overflow-y: scroll; 
+		-webkit-overflow-scrolling: touch; 
 	}
 `
 
 const Container = styled.div`
+	display: flex;
+	justify-content: space-between;
 	height: 100%;
 	scroll-snap-align: center;
 	width: 1400px;
-	display: flex;
-	justify-content: space-between;
+	
+
+	@media only screen and (max-width: 1465px) {
+		width: 1000px;
+		padding: 10px;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	@media only screen and (max-width: 1060px) {
+		width: 768px;
+	}
 
 	@media only screen and (max-width: 768px) {
 		width: 100%;
@@ -94,8 +109,9 @@ const Button = styled.button`
 `;
 
 const Animation = styled.div`
-	flex: 3;
+	flex: 4;
 	position: relative;
+	width: 100%;
 
 	@media only screen and (max-width: 768px) {
 		flex: 1;

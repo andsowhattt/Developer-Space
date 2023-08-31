@@ -10,6 +10,19 @@ const Section = styled.div`
 	scroll-snap-align: center;
 	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: 1465px) {
+		padding-top: 650px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		padding: 10px;
+		scroll-snap-align: none;
+		overflow-y: scroll; 
+		-webkit-overflow-scrolling: touch; 
+	}
+	@media only screen and (max-width: 375px) {
+		padding-top: 250px;
+	}
 `
 
 const Container = styled.div`
@@ -18,12 +31,23 @@ const Container = styled.div`
 	width: 1400px;
 	display: flex;
 	justify-content: space-between;
+	@media only screen and (max-width: 1465px) {
+		flex-direction: column-reverse;
+		width: 1000px;
+		padding: 10px;
+	}
+	@media only screen and (max-width: 1060px) {
+		width: 768px;
+		padding: 100px;
+	}
+	@media only screen and (max-width: 768px) {
+		padding: 0px;
+	}
 `
 
 const Animation = styled.div`
 	flex: 1;
-
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1465px) {
 		display: none;
 	}
 `

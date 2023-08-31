@@ -8,6 +8,9 @@ const Section = styled.div`
 
 	@media only screen and (max-width: 768px) {
 		width: 100%;
+		scroll-snap-align: none;
+		overflow-y: scroll; 
+		-webkit-overflow-scrolling: touch; 
 	}
 `;
 
@@ -17,10 +20,18 @@ const Container = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0px;
+	
+	@media only screen and (max-width: 1465px) {
+		width: 1000px;
+		padding: 10px;
+	}
+
+	@media only screen and (max-width: 1060px) {
+		width: 768px;
+	}
 
 	@media only screen and (max-width: 768px) {
 		width: 100%;
-		padding: 10px;
 	}
 `;
 
@@ -30,12 +41,17 @@ const Menu = styled.div`
 	gap: 60px;
 	font-size: 18px;
 	font-weight: 500;
+
+	@media only screen and (max-width: 1060px) {
+		gap: 10px;
+	}
 `;
 
 const Icons = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	
 `;
 
 const SearchIcon = styled(FaPhone)`
@@ -50,6 +66,10 @@ const SearchIcon = styled(FaPhone)`
 
 const Logo = styled.img`
 	height: 130px;
+
+	@media only screen and (max-width: 768px) {
+		height: 100px;
+	}
 `;
 
 const List = styled.ul`
@@ -57,7 +77,7 @@ const List = styled.ul`
 	gap: 30px;
 	list-style: none;
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1060px) {
 		display: none;
 	}
 `;
@@ -85,6 +105,10 @@ const Button = styled.button`
 	&:hover {
 		background-color: #3d1c56;
 		transform: scale(1.05);
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 120px;
 	}
 `;
 
