@@ -7,12 +7,12 @@ import styled from 'styled-components';
 
 const Desc = styled.div`
 	width: 200px;
-	height: 70px;
+	height: fit-content;
 	padding: 20px;
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
-	top: 350px;
+	top: 700px;
 	right: 100px;
 
 	@media only screen and (max-width: 768px) {
