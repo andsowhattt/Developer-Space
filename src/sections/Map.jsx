@@ -5,6 +5,12 @@ import {
 	Geography,
 	Annotation
 } from "react-simple-maps";
+import styled from "styled-components"; 
+
+
+const StyledGeography = styled(Geography)`
+	pointer-events: none;
+`;
 
 const Map = () => {
 	return (
@@ -15,7 +21,7 @@ const Map = () => {
 				center: [-5, -7], 
 				scale: 950
 			}}
-			style={{width:"100%", height:"100%"}}
+			style={{ width: "100%", height: "100%" }}
 		>
 			<Geographies
 				geography="/features.json"
@@ -25,12 +31,12 @@ const Map = () => {
 			>
 				{({ geographies }) =>
 					geographies.map((geo) => (
-						<Geography key={geo.rsmKey} geography={geo} />
+						<StyledGeography key={geo.rsmKey} geography={geo} />
 					))
 				}
 			</Geographies>
 			<Annotation
-				subject={[30.5238, 50.4501]} 
+				subject={[30.5238, 50.4501]}
 				dx={-90}
 				dy={-30}
 				connectorProps={{
