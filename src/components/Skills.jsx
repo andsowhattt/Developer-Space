@@ -126,11 +126,13 @@ const Animation = styled.div`
 
 	@media only screen and (max-width: 768px) {
 		margin: auto;
-	}
-	
-	@media only screen and (max-width: 375px) {
-		justify-content: center;
 		width: 300px;
+		height: fit-content;
+		position: absolute;
+		top: 140px;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 `
 

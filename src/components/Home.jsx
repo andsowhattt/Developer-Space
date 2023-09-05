@@ -50,7 +50,6 @@ const Motto = styled.div`
 	flex: 2;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	gap: 20px;
 
 	@media only screen and (max-width: 768px) {

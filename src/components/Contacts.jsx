@@ -26,9 +26,13 @@ const Feedback = styled.div`
 		justify-content: center;
 	}
 	
-	@media only screen and (max-width: 768px) {
-		padding-top: 150px;
-	}
+	// @media only screen and (max-width: 768px) {
+	// 	padding-top: 150px;
+	// }
+	// @media only screen and (max-width: 375px) {
+	// 	padding-top: 50px;
+	// 	padding-bottom: 50px;
+	// }
 `
 
 const Title = styled.h2`

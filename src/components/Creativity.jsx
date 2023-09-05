@@ -41,10 +41,6 @@ const Container = styled.div`
 
 const Animation = styled.div`
 	flex: 1;
-	
-	@media only screen and (max-width: 1465px) {
-		display: none;
-	}
 `
 const Title = styled.h1`
 	font-size: 74px;
