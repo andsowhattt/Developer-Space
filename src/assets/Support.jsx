@@ -16,7 +16,7 @@ const Desc = styled.div`
 	right: 50px;
 
 	@media only screen and (max-width: 768px) {
-		top: 280px;
+		top: 0px;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -31,7 +31,7 @@ const Support = () => {
 				<Stage environment='city' intensity={0.6}>
 					<Ok />
 				</Stage>
-				<OrbitControls enableZoom={false} autoRotate/>
+				<OrbitControls enableZoom={false} autoRotate />
 			</Canvas>
 			<Desc>I can provide ongoing support in the website's development over the years by integrating new and modern features.
 			</Desc>
