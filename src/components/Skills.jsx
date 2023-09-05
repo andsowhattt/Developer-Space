@@ -24,9 +24,11 @@ const Section = styled.div`
 	font-size: 14px;
 	justify-content: center;
 	font-weight: 300;
+
 	@media only screen and (max-width: 1465px) {
 		padding-bottom: 250px;
 	}
+
 	@media only screen and (max-width: 768px) {
 		padding-bottom: 10px;
 	}
@@ -113,15 +115,19 @@ const Animation = styled.div`
 	flex: 2;
 	margin-right: auto;
 	width: 1100px;
+
 	@media only screen and (max-width: 1465px) {
 		flex: 1;
 	}
+
 	@media only screen and (max-width: 1060px) {
 		width: 400px;
 	}
+
 	@media only screen and (max-width: 768px) {
 		margin: auto;
 	}
+	
 	@media only screen and (max-width: 375px) {
 		justify-content: center;
 		width: 300px;
