@@ -29,7 +29,6 @@ const Section = styled.div`
 	}
 	@media only screen and (max-width: 768px) {
 		padding-bottom: 10px;
-		scroll-snap-align: none;
 	}
 `
 
@@ -83,7 +82,7 @@ const ListItem = styled.li`
 	-webkit-text-stroke: 1px white;
 
 	@media only screen and (max-width: 768px) {
-		font-size: 45px;
+		font-size: 36px;
 	}
 
 	&::after{

@@ -16,10 +16,6 @@ const Section = styled.div`
 
 	@media only screen and (max-width: 768px) {
 		padding: 10px;
-		scroll-snap-align: none;
-	}
-	@media only screen and (max-width: 375px) {
-		padding-top: 250px;
 	}
 `
 
@@ -40,7 +36,6 @@ const Container = styled.div`
 	}
 	@media only screen and (max-width: 768px) {
 		padding: 0px;
-		scroll-snap-align: none;
 	}
 `
 
@@ -54,7 +49,7 @@ const Title = styled.h1`
 	font-size: 74px;
 
 	@media only screen and (max-width: 768px) {
-		font-size: 60px;
+		font-size: 36px;
 	}
 `
 const Motto= styled.div`

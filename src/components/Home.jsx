@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import { Canvas } from '@react-three/fiber';
@@ -12,10 +12,10 @@ const Section = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	overflow-x: hidden;
 
 	@media only screen and (max-width: 768px) {
 		height: 200vh;
-		scroll-snap-align: none;
 	}
 `
 
@@ -43,7 +43,6 @@ const Container = styled.div`
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		scroll-snap-align: none;
 	}
 `
 
@@ -64,6 +63,7 @@ const Title = styled.h1`
 
 	@media only screen and (max-width: 768px) {
 		text-align: center;
+		font-size: 36px;
 	}
 `
 const Motivation = styled.div`
@@ -128,6 +128,8 @@ const Img = styled.img`
 	right: 0;
 	margin: auto;
 	animation: animate 2s infinite ease alternate;
+	pointer-events: none;
+	user-drag: none;
 
 	@media only screen and (max-width: 768px) {
 		width: 300px;
@@ -142,6 +144,24 @@ const Img = styled.img`
 `;
 
 const Home = () => {
+	const [animationEnabled, setAnimationEnabled] = useState(true);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const windowWidth = window.innerWidth;
+			const shouldEnableAnimation = windowWidth > 768;
+			setAnimationEnabled(shouldEnableAnimation);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		handleResize();
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	return (
 		<Section id='home'>
 			<Navbar />
@@ -157,7 +177,7 @@ const Home = () => {
 				</Motto>
 				<Animation>
 					<Canvas>
-						<OrbitControls enableZoom={false} />
+						<OrbitControls enableRotate={animationEnabled} enableZoom={false} />
 						<ambientLight intensity={1} />
 						<directionalLight position={[3, 2, 1]} />
 						<Sphere args={[1, 100, 200]} scale={2.5}>
@@ -173,7 +193,7 @@ const Home = () => {
 				</Animation>
 			</Container>
 		</Section>
-	)
+	);
 }
 
 export default Home;

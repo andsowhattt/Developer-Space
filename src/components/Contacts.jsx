@@ -6,9 +6,6 @@ import Map from '../sections/Map';
 const Section = styled.div`
 	height: 100vh;
 	scroll-snap-align: center;
-	@media only screen and (max-width: 768px) {
-		scroll-snap-align: none;
-	}
 `
 
 const Container = styled.div`
@@ -17,8 +14,6 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	gap: 50px;
-
-	
 `
 
 const Feedback = styled.div`
