@@ -125,6 +125,7 @@ const Animation = styled.div`
 	@media only screen and (max-width: 375px) {
 		justify-content: center;
 		width: 300px;
+	}
 `
 
 const Skills = () => {
