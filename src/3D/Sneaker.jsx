@@ -12,19 +12,19 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/sneaker-transformed.glb')
-  return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes['0_Material_1_0'].geometry} material={materials.PaletteMaterial001} scale={0.001} />
-      <mesh geometry={nodes['Object_2_Plaster_(3)_0'].geometry} material={materials.PaletteMaterial002} scale={0.001} />
-      <mesh geometry={nodes.Object_12_Blue_felt_0.geometry} material={materials.Blue_felt} scale={0.001} />
-      <mesh geometry={nodes.Object_26_Leather_light_brown_0.geometry} material={materials.Leather_light_brown} scale={0.001} />
-      <mesh geometry={nodes['Object_29_Metal_(3)_0'].geometry} material={materials.PaletteMaterial003} scale={0.001} />
-      <mesh geometry={nodes.Object_131_Japanese_texture_fabric_0.geometry} material={materials.Japanese_texture_fabric} scale={0.001} />
-      <mesh geometry={nodes.Object_20_Denim_dark_blue_0.geometry} material={materials.Denim_dark_blue} scale={0.001} />
-      <mesh geometry={nodes['Object_110_Metal_(1)_0'].geometry} material={materials.PaletteMaterial004} scale={0.001} />
-    </group>
-  )
+	const { nodes, materials } = useGLTF('/sneaker-transformed.glb')
+	return (
+		<group {...props} dispose={null}>
+			<mesh geometry={nodes['0_Material_1_0'].geometry} material={materials.PaletteMaterial001} scale={0.001} />
+			<mesh geometry={nodes['Object_2_Plaster_(3)_0'].geometry} material={materials.PaletteMaterial002} scale={0.001} />
+			<mesh geometry={nodes.Object_12_Blue_felt_0.geometry} material={materials.Blue_felt} scale={0.001} />
+			<mesh geometry={nodes.Object_26_Leather_light_brown_0.geometry} material={materials.Leather_light_brown} scale={0.001} />
+			<mesh geometry={nodes['Object_29_Metal_(3)_0'].geometry} material={materials.PaletteMaterial003} scale={0.001} />
+			<mesh geometry={nodes.Object_131_Japanese_texture_fabric_0.geometry} material={materials.Japanese_texture_fabric} scale={0.001} />
+			<mesh geometry={nodes.Object_20_Denim_dark_blue_0.geometry} material={materials.Denim_dark_blue} scale={0.001} />
+			<mesh geometry={nodes['Object_110_Metal_(1)_0'].geometry} material={materials.PaletteMaterial004} scale={0.001} />
+		</group>
+	)
 }
 
 useGLTF.preload('/sneaker-transformed.glb')
